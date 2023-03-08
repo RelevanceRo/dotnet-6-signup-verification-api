@@ -1,7 +1,8 @@
-namespace WebApi.Models.Accounts;
+namespace TCIG.MHUSIGTASAPI.Models.Accounts;
 
 using System.ComponentModel.DataAnnotations;
-using WebApi.Entities;
+
+using TCIG.MHUSIGTASAPI.Entities;
 
 public class UpdateRequest
 {
@@ -9,7 +10,7 @@ public class UpdateRequest
     private string _confirmPassword;
     private string _role;
     private string _email;
-    
+
     public string Title { get; set; }
     public string FirstName { get; set; }
     public string LastName { get; set; }
@@ -36,7 +37,7 @@ public class UpdateRequest
     }
 
     [Compare("Password")]
-    public string ConfirmPassword 
+    public string ConfirmPassword
     {
         get => _confirmPassword;
         set => _confirmPassword = replaceEmptyWithNull(value);

@@ -1,4 +1,4 @@
-namespace WebApi.Models.Accounts;
+namespace TCIG.MHUSIGTASAPI.Models.Accounts;
 
 public class AccountResponse
 {

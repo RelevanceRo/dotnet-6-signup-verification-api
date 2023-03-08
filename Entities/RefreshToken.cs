@@ -1,6 +1,7 @@
-namespace WebApi.Entities;
+namespace TCIG.MHUSIGTASAPI.Entities;
 
 using Microsoft.EntityFrameworkCore;
+
 using System.ComponentModel.DataAnnotations;
 
 [Owned]

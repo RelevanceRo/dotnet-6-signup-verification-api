@@ -1,7 +1,8 @@
-﻿namespace WebApi.Controllers;
+﻿namespace TCIG.MHUSIGTASAPI.Controllers;
 
 using Microsoft.AspNetCore.Mvc;
-using WebApi.Entities;
+
+using TCIG.MHUSIGTASAPI.Entities;
 
 [Controller]
 public abstract class BaseController : ControllerBase

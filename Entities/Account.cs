@@ -1,4 +1,4 @@
-namespace WebApi.Entities;
+namespace TCIG.MHUSIGTASAPI.Entities;
 
 public class Account
 {
@@ -20,8 +20,8 @@ public class Account
     public DateTime? Updated { get; set; }
     public List<RefreshToken> RefreshTokens { get; set; }
 
-    public bool OwnsToken(string token) 
+    public bool OwnsToken(string token)
     {
-        return this.RefreshTokens?.Find(x => x.Token == token) != null;
+        return RefreshTokens?.Find(x => x.Token == token) != null;
     }
 }

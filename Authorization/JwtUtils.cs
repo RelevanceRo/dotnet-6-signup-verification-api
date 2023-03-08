@@ -1,13 +1,15 @@
-namespace WebApi.Authorization;
+namespace TCIG.MHUSIGTASAPI.Authorization;
 
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
-using WebApi.Entities;
-using WebApi.Helpers;
+
+using TCIG.MHUSIGTASAPI.Entities;
+using TCIG.MHUSIGTASAPI.Helpers;
 
 public interface IJwtUtils
 {

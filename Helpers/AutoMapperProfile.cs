@@ -1,8 +1,9 @@
-namespace WebApi.Helpers;
+namespace TCIG.MHUSIGTASAPI.Helpers;
 
 using AutoMapper;
-using WebApi.Entities;
-using WebApi.Models.Accounts;
+
+using TCIG.MHUSIGTASAPI.Entities;
+using TCIG.MHUSIGTASAPI.Models.Accounts;
 
 public class AutoMapperProfile : Profile
 {

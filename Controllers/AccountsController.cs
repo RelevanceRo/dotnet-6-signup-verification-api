@@ -1,10 +1,12 @@
-﻿namespace WebApi.Controllers;
+﻿namespace TCIG.MHUSIGTASAPI.Controllers;
 
 using Microsoft.AspNetCore.Mvc;
-using WebApi.Authorization;
-using WebApi.Entities;
-using WebApi.Models.Accounts;
-using WebApi.Services;
+
+using TCIG.MHUSIGTASAPI.Entities;
+using TCIG.MHUSIGTASAPI.Models.Accounts;
+using TCIG.MHUSIGTASAPI.Services;
+
+using TCIG.MHUSIGTASAPI.Authorization;
 
 [Authorize]
 [ApiController]

@@ -1,7 +1,10 @@
-namespace WebApi.Helpers;
+namespace TCIG.MHUSIGTASAPI.Helpers;
 
 using Microsoft.EntityFrameworkCore;
-using WebApi.Entities;
+
+using TCIG.MHUSIGTASAPI.Entities;
+
+
 
 public class DataContext : DbContext
 {

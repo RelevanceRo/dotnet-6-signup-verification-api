@@ -1,7 +1,8 @@
-namespace WebApi.Models.Accounts;
+namespace TCIG.MHUSIGTASAPI.Models.Accounts;
 
 using System.ComponentModel.DataAnnotations;
-using WebApi.Entities;
+
+using TCIG.MHUSIGTASAPI.Entities;
 
 public class CreateRequest
 {

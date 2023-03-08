@@ -1,8 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+
 using System.Text.Json.Serialization;
-using WebApi.Authorization;
-using WebApi.Helpers;
-using WebApi.Services;
+
+using TCIG.MhuSigtasAPI.Helpers;
+using TCIG.MHUSIGTASAPI.Authorization;
+using TCIG.MHUSIGTASAPI.Helpers;
+using TCIG.MHUSIGTASAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,8 +14,16 @@ var builder = WebApplication.CreateBuilder(args);
 {
     var services = builder.Services;
     var env = builder.Environment;
- 
+    var configuration = builder.Configuration;
+
     services.AddDbContext<DataContext>();
+    services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseOracle(
+                    configuration.GetConnectionString("OracleConnection"),
+                    b => b.MigrationsAssembly(typeof(ApplicationDbContext)
+                    .Assembly.FullName)
+                    //.UseOracleSQLCompatibility("12")
+                    ));
     services.AddCors();
     services.AddControllers().AddJsonOptions(x => 
     {
@@ -43,7 +55,7 @@ using (var scope = app.Services.CreateScope())
 {
     // generated swagger json and swagger ui middleware
     app.UseSwagger();
-    app.UseSwaggerUI(x => x.SwaggerEndpoint("/swagger/v1/swagger.json", ".NET Sign-up and Verification API"));
+    app.UseSwaggerUI(x => x.SwaggerEndpoint("/swagger/v1/swagger.json", "MHU - SIGTAS API"));
 
     // global cors policy
     app.UseCors(x => x

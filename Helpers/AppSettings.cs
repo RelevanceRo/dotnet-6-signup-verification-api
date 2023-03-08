@@ -1,4 +1,4 @@
-namespace WebApi.Helpers;
+namespace TCIG.MHUSIGTASAPI.Helpers;
 
 public class AppSettings
 {

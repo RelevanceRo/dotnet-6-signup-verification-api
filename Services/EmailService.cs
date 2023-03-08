@@ -1,11 +1,14 @@
-namespace WebApi.Services;
+namespace TCIG.MHUSIGTASAPI.Services;
 
 using MailKit.Net.Smtp;
 using MailKit.Security;
+
 using Microsoft.Extensions.Options;
+
 using MimeKit;
 using MimeKit.Text;
-using WebApi.Helpers;
+
+using TCIG.MHUSIGTASAPI.Helpers;
 
 public interface IEmailService
 {

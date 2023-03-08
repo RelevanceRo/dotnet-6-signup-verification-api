@@ -1,7 +1,8 @@
-namespace WebApi.Authorization;
+namespace TCIG.MHUSIGTASAPI.Authorization;
 
 using Microsoft.Extensions.Options;
-using WebApi.Helpers;
+
+using TCIG.MHUSIGTASAPI.Helpers;
 
 public class JwtMiddleware
 {

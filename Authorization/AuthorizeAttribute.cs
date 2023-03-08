@@ -1,8 +1,9 @@
-namespace WebApi.Authorization;
+namespace TCIG.MHUSIGTASAPI.Authorization;
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using WebApi.Entities;
+
+using TCIG.MHUSIGTASAPI.Entities;
 
 [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method)]
 public class AuthorizeAttribute : Attribute, IAuthorizationFilter
@@ -23,7 +24,7 @@ public class AuthorizeAttribute : Attribute, IAuthorizationFilter
 
         // authorization
         var account = (Account)context.HttpContext.Items["Account"];
-        if (account == null || (_roles.Any() && !_roles.Contains(account.Role)))
+        if (account == null || _roles.Any() && !_roles.Contains(account.Role))
         {
             // not logged in or role not authorized
             context.Result = new JsonResult(new { message = "Unauthorized" }) { StatusCode = StatusCodes.Status401Unauthorized };

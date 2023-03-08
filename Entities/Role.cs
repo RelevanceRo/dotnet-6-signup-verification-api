@@ -1,4 +1,4 @@
-namespace WebApi.Entities;
+namespace TCIG.MHUSIGTASAPI.Entities;
 
 public enum Role
 {
